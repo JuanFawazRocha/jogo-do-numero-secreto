@@ -6,7 +6,7 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    resposiveVoice.speak(texto, 'Brazilian Portuguese Female');
+    resposiveVoice.speak(texto, 'Brazilian Portuguese Female', {rete:1.2});
 };
 
 function exibirMensagemInicial(){
@@ -20,7 +20,7 @@ exibirTextoNaTela('h1', 'Jogo do número secreto');
 exibirTextoNaTela('p', 'Escolha um número de 1 a 10');
 
 function verificarChute() {
-    let chute = document.querySelector('input').value;
+    let chute = document.querySelector('inputa').value;
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
