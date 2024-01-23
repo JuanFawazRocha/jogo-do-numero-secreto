@@ -20,7 +20,7 @@ exibirTextoNaTela('h1', 'Jogo do número secreto');
 exibirTextoNaTela('p', 'Escolha um número de 1 a 10');
 
 function verificarChute() {
-    let chute = document.querySelector('inputa').value;
+    let chute = document.querySelector('input').value;
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
